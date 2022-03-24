@@ -1,0 +1,59 @@
+.Appointment {
+  --font: "Roboto", sans-serif;
+  --darkColor: #0f2d46;
+  --mediumColor: #5e5c5f;
+  --lightColor: #bdbdbd;
+  --blueColor: #11525c;
+  color: var(--darkColor);
+  background-color: rgb(238, 237, 237);
+  border-radius: 10px;
+  padding: 20px;
+  margin-right: 20px;
+}
+.Appointment .row {
+  display: flex;
+  justify-content: space-evenly;
+}
+.Appointment .col {
+  flex-direction: column;
+}
+.Appointment .details {
+  margin-bottom: 20px;
+}
+.Appointment h2 {
+  margin: 0;
+}
+.Appointment p {
+  margin-bottom: 5px;
+}
+.Appointment textarea {
+  width: 100%;
+  border-radius: 5px;
+  background-color: rgb(211, 211, 211);
+  border: none;
+  padding: 10px;
+  font-family: var(--font);
+}
+.Appointment .colorCont {
+  min-width: 90px;
+  max-width: 90px;
+}
+.Appointment .swatchCont {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin-bottom: 5px;
+}
+.Appointment .swatch {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+  border-radius: 50%;
+  text-align: right;
+}
+.Appointment #colorPicker {
+  border: 1px solid var(--darkColor);
+  border-radius: 5px;
+  justify-content: center;
+  padding: 5px 0 5px 5px;
+}
