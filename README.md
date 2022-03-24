@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# Tech Used
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Create React App](https://create-react-app.dev/docs/getting-started/)
+[Font Awesome](https://fontawesome.com/)
+[React Color](https://www.npmjs.com/package/react-color)
+[React Calendar](https://www.npmjs.com/package/react-calendar)
 
 ## Available Scripts
 
