@@ -1,0 +1,18 @@
+.Button {
+  --darkColor: #0f2d46;
+  --mediumColor: #5e5c5f;
+  --lightColor: #bdbdbd;
+  --blueColor: #11525c;
+  display: inline-flex;
+  padding: 10px 0 10px 0;
+  margin: 10px 0 10px 0;
+  max-height: 30px;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  text-decoration: none;
+  color: var(--lightColor);
+  background-color: transparent;
+  font-size: 18px;
+  align-items: center;
+}
