@@ -16,10 +16,5 @@ body {
   max-width: 1200px;
   min-width: 875px;
   margin: 20px auto;
-  border: 2px solid salmon;
   border-radius: 5px;
-}
-.App .appts {
-  grid-column: 2 / span 6;
-  grid-row: 2;
 }
