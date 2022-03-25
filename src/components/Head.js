@@ -6,7 +6,7 @@ import icon from "../images/weirdIcon.jpeg";
 
 export default function Head() {
   return (
-    <header>
+    <header className="Head">
       <div className="user">
         <div className="user-avatar">
           <i className="fa fa-solid fa-user"></i>
