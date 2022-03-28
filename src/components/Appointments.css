@@ -1,7 +1,0 @@
-.Appointments {
-  display: flex;
-}
-.Appointments > div {
-  flex-direction: column;
-  width: 50%;
-}
