@@ -1,73 +1,65 @@
-# Tech Used
+## Table of Contents
 
-[Create React App](https://create-react-app.dev/docs/getting-started/)
-[Font Awesome](https://fontawesome.com/)
-[React Color](https://www.npmjs.com/package/react-color)
-[React Calendar](https://www.npmjs.com/package/react-calendar)
+- [Tech Used](#tech-used)
+- [Quick Look](#quick-look)
+- [How To](#how-to-build)
+- [What I learned](#what-i-learned)
+- [Author](#author)
 
-## Available Scripts
+## Tech Used
 
-In the project directory, you can run:
+- [Create React App](https://create-react-app.dev/docs/getting-started/) - if you're looking to set up a React App super quick then this is the best resource!
+- [Font Awesome](https://fontawesome.com/) - great for sourcing icons
+- [React Color](https://www.npmjs.com/package/react-color) - I love how organized the docs are. Easy to navigate, use, and customize.
+- [React Calendar](https://www.npmjs.com/package/react-calendar)
 
-### `npm start`
+## Quick Look
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Simple dyanmic appointment page layout using state to render the Appointment Stream component from upcoming to past appointments.
+- Utilized npm packages
+- Desktop layout design by Seyma Anajafi (UX/UI)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How To Recreate This App
 
-### `npm test`
+1. Follow create-react-app instructions to initialize project
+2. Remove unnecessary files
+3. Import your Font Awesome Kit into head of index.html
+4. Build various components
+5. Add CSS
+6. Add JS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## What I learned
 
-### `npm run build`
+- This build helped me practice passing state to children. This is a new concept for me that I needed to learn for a Weather App that I'm building. When my friend, Seyma, sent me this mockup I knew that I could use it as an opportunity to practice this new concept.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+export default function Appointments() {
+  const [stream, setStream] = React.useState("upcoming");
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  return (
+    <div className="Appointments">
+      <div className="myApptsHead">
+        <h1>My Appointments</h1>
+        <div className="apptsTypeBtnsCont">
+          <Button onClick={() => setStream("upcoming")}>
+            Upcoming Appointments
+          </Button>
+          <Button onClick={() => setStream("past")}>Past Appointments</Button>
+        </div>
+      </div>
+      <div className="row">
+        <ApptStream stream={stream} />
+        <div className="calendarCont">
+          <Calendar selectRange={true} />
+        </div>
+      </div>
+    </div>
+  );
+}
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
 
-### `npm run eject`
+# Author
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Personal Portfolio - [Nikki Klein](https://www.kleinlikecalvin.com)
+- Twitter - [@kleinLikeCalvin](https://www.twitter.com/kleinlikecalvin)
