@@ -12,31 +12,23 @@
 }
 .Appointment .row {
   display: flex;
-  justify-content: space-evenly;
 }
 .Appointment .col {
   flex-direction: column;
 }
 .Appointment .details {
-  margin-bottom: 20px;
+  justify-content: space-between;
+}
+.Appointment .info {
+  min-width: 80%;
+  max-width: 80%;
 }
 .Appointment h2 {
   margin: 0;
 }
-.Appointment p {
-  margin-bottom: 5px;
-}
-.Appointment textarea {
-  width: 100%;
-  border-radius: 5px;
-  background-color: rgb(211, 211, 211);
-  border: none;
-  padding: 10px;
-  font-family: var(--font);
-}
 .Appointment .colorCont {
-  min-width: 90px;
-  max-width: 90px;
+  min-width: 20%;
+  max-width: 20%;
 }
 .Appointment .swatchCont {
   display: flex;
@@ -49,11 +41,18 @@
   height: 25px;
   margin-right: 5px;
   border-radius: 50%;
-  text-align: right;
 }
 .Appointment #colorPicker {
-  border: 1px solid var(--darkColor);
-  border-radius: 5px;
+  border-top: 1px dotted var(--darkColor);
   justify-content: center;
-  padding: 5px 0 5px 5px;
+  padding: 5px 0 0 5px;
+}
+
+.Appointment textarea {
+  width: 100%;
+  border-radius: 5px;
+  background-color: rgb(211, 211, 211);
+  border: none;
+  padding: 10px;
+  font-family: var(--font);
 }

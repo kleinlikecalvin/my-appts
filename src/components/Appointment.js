@@ -9,38 +9,48 @@ export default function Appointment({ children, ...props }) {
 
   function handleSwatchChange(color, event) {
     setColor(color.hex);
+    setColorPickerVisibility("none");
   }
 
   function handleClick() {
-    if (colorPickerVisibility === "none") {
-      setColorPickerVisibility("flex");
-    } else {
-      setColorPickerVisibility("none");
-    }
+    setColorPickerVisibility("flex");
   }
-  return (
-    <div className="Appointment">
-      <div className="row">
-        <div className="col details">{children}</div>
-        <div className="col colorCont">
-          <div className="swatchCont" onClick={() => handleClick()}>
-            {" "}
-            <div className="swatch" style={{ backgroundColor: color }}></div>
-            <i className="fa fa-solid fa-angle-down"></i>
-          </div>
-          <div id="colorPicker" style={{ display: colorPickerVisibility }}>
-            {" "}
-            <CirclePicker
-              width="90px"
-              colors={["red", "yellow", "green", "purple"]}
-              onChangeComplete={(color) => handleSwatchChange(color)}
-            />
+
+  if (props.stream === "upcoming") {
+    return (
+      <div className="Appointment upcoming">
+        <div className="row details">
+          <div className="col info">{children}</div>
+          <div className="col colorCont">
+            <div className="swatchCont" onClick={() => handleClick()}>
+              {" "}
+              <div className="swatch" style={{ backgroundColor: color }}></div>
+              <i className="fa fa-solid fa-angle-down"></i>
+            </div>
+            <div id="colorPicker" style={{ display: colorPickerVisibility }}>
+              <CirclePicker
+                width="90px"
+                colors={["red", "yellow", "green", "purple"]}
+                onChangeComplete={(color) => handleSwatchChange(color)}
+              />
+            </div>
           </div>
         </div>
+        <div className="row notes">
+          <textarea rows={3} cols={33} placeholder="Notes"></textarea>
+        </div>
       </div>
-      <div className="row">
-        <textarea rows={3} cols={33} placeholder="Notes"></textarea>
+    );
+  } else {
+    return (
+      <div className="Appointment past">
+        <div className="row">
+          <div className="details">{children}</div>
+        </div>
+        <div className="row">
+          <textarea rows={3} cols={33} placeholder="Notes" disabled></textarea>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
