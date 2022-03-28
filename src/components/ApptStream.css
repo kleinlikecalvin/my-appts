@@ -1,0 +1,6 @@
+.ApptStream .past {
+  opacity: 50%;
+}
+.ApptStream .past .details {
+  width: 100%;
+}
